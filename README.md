@@ -1,79 +1,43 @@
-# Interested in working for Famly?
+# Nursery Web Application 🌻
 
-Give us a chance to see your beautiful code! 🤩
+## Overview
 
-## How to get started
-- Fork this repository
-- Create a small application in React (or another agreed upon framework)
-- Describe your design decisions and setup instructions in the README.md of the forked repository
+This web application is created to help nurseries manage the check-in and check-out process of children. When parents arrive to drop their children off, they select a pick-up time and check in the child, and check them out when picking them up. The application integrates with an API to fetch data about registered children.
 
-## The assignment
-You are tasked to build a simple application for a nursery to manage the attendance of children each day.
+## Features
 
-It has to be done using Typescript.
+- **API Integration:** Fetch data about registered children from an API using an access token.
+- **Check-in/Check-out:** Display lists of children, depending on if they are currently checked in or checked out.
+- **Check-in Process:**
+  - If a child is not checked in, parents can select a pick-up time.
+  - Press the "Check In" button to register the child as checked in.
+- **Check-out Process:**
+  - When picking up the child, press the "Check Out" button to mark the child as checked out.
 
-The application should be able to do 3 things:
-1. List children with some form of pagination/lazy-loading/infinite-scroll
-2. Checkin a child
-3. Checkout a child
+## Technologies Used
 
-Don't worry about design or anything like that.
+React and TypeScript. For simplicity, no other frameworks were used.
 
-If you have any questions feel free to reach out to the person who sent you the assignment ☺️
+## Getting Started
 
-## API Specification
+1. Clone the repository
 
-You have received an access token in the email that contained the link to this page.
+   ```bash
+   git clone https://github.com/annasundbergg/famly-assignment
+   cd famly-assignment
+   ```
 
-### Fetch some children from
+2. Install dependencies
 
-The API does not support any limit or offset, so the pagination/lazy-loading/infinite-scroll will have to be done client-side only.
+   ```bash
+   npm install
+   ```
 
-```
-GET https://app.famly.co/api/daycare/tablet/group
-Arguments: {
-	accessToken: <accessToken>,
-	groupId: '86413ecf-01a1-44da-ba73-1aeda212a196',
-	institutionId: 'dc4bd858-9e9c-4df7-9386-0d91e42280eb'
-}
-```
+3. Configure the API key
 
-Example in cURL:
+   - Add your accesstoken to a `.env` file or directly in the configuration.
 
-```bash
-curl "https://app.famly.co/api/daycare/tablet/group?accessToken=<accessToken>&groupId=86413ecf-01a1-44da-ba73-1aeda212a196&institutionId=dc4bd858-9e9c-4df7-9386-0d91e42280eb"
-```
-
-### Checkin child
-```
-POST https://app.famly.co/api/v2/children/<childId>/checkins
-
-Arguments: {
-	accessToken: <accessToken>
-	pickupTime: 16:00
-}
-```
-
-Example in cURL:
-
-```bash
-curl \
-  -d 'accessToken=<accessToken>&pickupTime=16:00' \
-  https://app.famly.co/api/v2/children/fcd683d0-bc31-468c-948f-1ca70b91439d/checkins
-```
-
-### Checkout child
-```
-POST https://app.famly.co/api/v2/children/<childId>/checkout
-Arguments: {
-	accessToken: <accessToken>
-}
-```
-
-Example in cURL:
-
-```bash
-curl \
-  -d 'accessToken=<accessToken>' \
-  https://app.famly.co/api/v2/children/fcd683d0-bc31-468c-948f-1ca70b91439d/checkout
-```
+4. Run the application
+   ```bash
+   npm start
+   ```
