@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Montserrat", system-ui;
+}
+
+.App {
+  text-align: center;
+}
+
+button {
+  font-family: "Montserrat", system-ui;
+  background-color: #591ab2;
+  border: 1px solid #222222;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  margin: 1rem;
+  padding: 7px 17px;
+  width: auto;
+}
+
+.back-btn {
+  margin-top: 5rem;
+}
+
+ul {
+  margin-top: 5rem;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 800px;
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+}
+
+li span {
+  flex-grow: 1;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.name-span {
+  font-weight: bold;
+}
+
+li .checkin-btn {
+  background-color: rgb(93, 163, 93);
+  margin-left: 1rem;
+}
+
+li .checkout-btn {
+  background-color: rgb(152, 41, 23);
+  margin-left: 1rem;
+}
+
+.pickup-time {
+  font-size: small;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

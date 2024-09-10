@@ -1,0 +1,14 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+}
+
+.pagination p {
+  cursor: pointer;
+}
+
+.active {
+  font-weight: bold;
+}
